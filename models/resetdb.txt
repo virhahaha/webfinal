@@ -1,0 +1,41 @@
+use cs332;
+
+drop table if exists reservations;
+drop table if exists rooms;
+drop table if exists users;
+
+create table users (
+	id int(5) unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	user_id int(5) unsigned NOT NULL,
+  	room_id int(5) unsigned NOT NULL,
+  	checkin_date varchar(20) NOT NULL,
+  	checkout_date varchar(20) NOT NULL,
+  	reservation_date varchar(100) NOT NULL
+)ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+alter table users add UNIQUE KEY(id);
+
+
+create table rooms (
+	id int(5) unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  	room_code varchar(20) DEFAULT NULL,
+ 	price int(5) unsigned NOT NULL,
+  	bed varchar(100) NOT NULL,
+  	booked varchar(200) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+alter table users add UNIQUE KEY(id);
+
+
+create table users (
+  	id int(5) unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  	name varchar(200) DEFAULT NULL,
+  	contact varchar(200) NOT NULL,
+  	address varchar(100) NOT NULL,
+  	username varchar(200) NOT NULL,
+ 	password varchar(40) NOT NULL,
+  	type varchar(100) NOT NULL DEFAULT 'user',
+  	email varchar(200) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+
+alter table users add UNIQUE KEY(id);

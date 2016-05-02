@@ -1,0 +1,14 @@
+use cs332;
+
+insert into rooms(id, room_code, price, bed, booked) values(1, "101", 500, "single", "no");
+insert into rooms(id, room_code, price, bed, booked) values(2, "102", 800, "double", "no");
+insert into rooms(id, room_code, price, bed, booked) values(3, "103", 500, "single", "no");
+insert into rooms(id, room_code, price, bed, booked) values(4, "104", 800, "double", "no");
+insert into rooms(id, room_code, price, bed, booked) values(5, "201", 600, "single", "no");
+insert into rooms(id, room_code, price, bed, booked) values(6, "202", 1000, "double", "no");
+insert into rooms(id, room_code, price, bed, booked) values(7, "203", 600, "single", "no");
+insert into rooms(id, room_code, price, bed, booked) values(8, "204", 1000, "double", "no");
+insert into rooms(id, room_code, price, bed, booked) values(9, "301", 2000, "double", "no");
+
+insert into users(id, name, contact, address, username, password, type, email) values
+	(1, "admin", "123456", "admin", "admin", "7c4a8d09ca3762af61e59520943dc26494f8941b", "admin", "admin@admin.com");
