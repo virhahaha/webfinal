@@ -4,7 +4,7 @@ drop table if exists reservations;
 drop table if exists rooms;
 drop table if exists users;
 
-create table users (
+create table reservations (
 	id int(5) unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	user_id int(5) unsigned NOT NULL,
   	room_id int(5) unsigned NOT NULL,
@@ -13,7 +13,7 @@ create table users (
   	reservation_date varchar(100) NOT NULL
 )ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
-alter table users add UNIQUE KEY(id);
+alter table reservations add UNIQUE KEY(id);
 
 
 create table rooms (
