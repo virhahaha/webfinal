@@ -1,8 +1,20 @@
 <?php
 class Reservation {
-	//private $conn;
-	//require_once(../mysql.php)
-
+	private $conn;
+	public function __construct() {
+		//require_once('/var/www/mysql.php');
+		$host="localhost";
+		$user="web";
+		$password="123456";
+		$dbname="cs332";
+		
+		// Create connection
+		$this->conn = new mysqli ( $host, $user, $password, $dbname );
+		// Check connection
+		if ($this->conn->connect_error) {
+			die ( "Connection failed: " . $this->conn->connect_error );
+		}
+	}
 	public function insert($reserve) {
 		$sql = "INSERT INTO reservations (user_id, room_id, checkin_date, checkout_date, reservation_date) 
 				VALUES ('" . $this->conn->real_escape_string ( $reserve ['user_id'] ) . "','" . $this->conn->real_escape_string ( $reserve ['room_id'] ) . "', '" . $this->conn->real_escape_string ( $reserve ['checkin_date'] ) . "', '" . $this->conn->real_escape_string ( $reserve ['checkout_date'] ) . "', '" . $this->conn->real_escape_string ( $reserve ['reservation_date'] ) . "')";
