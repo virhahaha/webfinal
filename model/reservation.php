@@ -2,11 +2,7 @@
 class Reservation {
 	private $conn;
 	public function __construct() {
-		//require_once('/var/www/mysql.php');
-		$host="localhost";
-		$user="web";
-		$password="123456";
-		$dbname="cs332";
+		require('/var/www/mysql.php');
 		
 		// Create connection
 		$this->conn = new mysqli ( $host, $user, $password, $dbname );
