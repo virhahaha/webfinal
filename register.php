@@ -75,7 +75,7 @@
 
 						<label class="col-lg-4"></label>
 						<div class="col-lg-8">
-							<button type="submit" class="btn btn-primary" value="resigter">Resister</button>
+							<button type="submit" class="btn btn-primary" value="resigter">Register</button>
 							<a href="index.html" target="_blank"><button
 									class="btn btn-danger" data-dismiss="modal" type="reset">Reset</button></a>
 						</div>

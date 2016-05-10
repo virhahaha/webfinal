@@ -17,12 +17,11 @@
 				<strong>
 				<?php if( isset($_POST['room_code']) ){ ?>Search Results<?php
 					$reservation = new Reservation();
-					//$result = $reservation->getPoint($_SESSION ['id']);
 					$room = new Room();
 					$result=$room->getAll();
-									} else {
+				    } else {
 					echo "Please type on top search bar for searching room.";
-				}
+				    }
 				?>
                 
             </strong>
@@ -67,9 +66,7 @@
 										}
 										if ($key == 'booked') {
 											$isBooked = $value;
-										}
-										
-																				
+										}										
 										if ($key != 'id' && $key != 'price') {
 											echo "<td>" . $value . "</td>";
 										}

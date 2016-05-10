@@ -47,22 +47,6 @@ a.navbar-brand {
 
 @import url('../../bootstrap/css/bootstrap-responsive.min.css');
 
-label.valid {
-	width: 24px;
-	height: 24px;
-	background: url(../img/valid.png) center center no-repeat;
-	display: inline-block;
-	text-indent: -9999px;
-}
-
-label.error {
-	font-weight: bold;
-	color: red; //
-	background: url(../img/error.png) center center no-repeat;
-	padding: 2px 8px;
-	margin-top: 2px;
-}
-
 .form-actions {
 	text-align: right;
 }
